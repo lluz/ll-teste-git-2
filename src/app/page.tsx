@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h2>
-        Yooooooooooo
+        Yooooooooooo 123
       </h2>
     </main>
   );
