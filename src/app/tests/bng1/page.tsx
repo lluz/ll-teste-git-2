@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-import hljs from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
+//import hljs from 'highlight.js';
+//import 'highlight.js/styles/atom-one-dark.css';
 
 type ApiError = {
     message: string;
@@ -23,13 +23,13 @@ export default function Page() {
 
     try {
 
-      const bngAPI_URL = 'https://jsonplaceholder.typicode.com/posts';
-      const bngAPI_KEY = '';
-      const bngData = {
-        ids: ['20'],
-        parts: ['All'],
-        extra: ['Body']
-      };
+      // const bngAPI_URL = 'https://jsonplaceholder.typicode.com/posts';
+      // const bngAPI_KEY = '';
+      // const bngData = {
+      //   ids: ['20'],
+      //   parts: ['All'],
+      //   extra: ['Body']
+      // };
 
       
       // let xhr  = new XMLHttpRequest();
@@ -42,14 +42,14 @@ export default function Page() {
       // xhr.send("{ids: ['20'], parts: ['All'], extra: ['Body']}");
 
 
-      const response = await fetch(bngAPI_URL, {
-        method: 'POST',
-        credentials: 'omit',
-        headers: {
-          'ngx-api-access-token': bngAPI_KEY,
-        },
-        body: JSON.stringify(bngData),
-      });
+      // const response = await fetch(bngAPI_URL, {
+      //   method: 'POST',
+      //   credentials: 'omit',
+      //   headers: {
+      //     'ngx-api-access-token': bngAPI_KEY,
+      //   },
+      //   body: JSON.stringify(bngData),
+      // });
 
 
       // const response = await fetch('https://dummyjson.com/quotes', {
@@ -57,9 +57,9 @@ export default function Page() {
       // });
 
 
-      // const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-      //   method: 'POST',
-      // });
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+      });
 
   
       if (!response.ok) {
@@ -106,22 +106,19 @@ export default function Page() {
               padding: '10px',
             }}>Data fetched successfully!</p>
 
-            {/* <pre><code style={{
-              whiteSpace: 'pre-wrap',
-              fontFamily: 'Consolas, "courier new"',
-              fontSize: '66%',
-              color: '#97daff',
-            }}>{ JSON.stringify(data, null, 2) }</code></pre> */}
-
             <div className="json-container">
               <pre>
                 <code 
                   className="json-data" 
-                  dangerouslySetInnerHTML={{ __html: hljs.highlightAuto( JSON.stringify(data, null, 2) ).value }} 
+
+                  // dá erro RegExp  no build / start
+                  // dangerouslySetInnerHTML={{ __html: hljs.highlightAuto( JSON.stringify(data, null, 2) ).value }} 
+                  
                   style={{
                     whiteSpace: 'pre-wrap'
                   }}
                 >
+                  {JSON.stringify(data, null, 2)}
                 </code>
               </pre>
             </div>
