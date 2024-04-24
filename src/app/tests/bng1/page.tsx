@@ -35,7 +35,7 @@ export default function Page() {
       // let xhr  = new XMLHttpRequest();
       // xhr.withCredentials = false;
       // xhr.open("POST", 'https://connect.newsgen.com/api/xyz/content/get'); 
-      // xhr.setRequestHeader('ngx-api-access-token', 'zupLJ3zVLKghwaHATIePrgnyGwOlE0ITGiBHudtcBW/9WYtPFag03XkntDL3Mu8E');
+      // xhr.setRequestHeader('ngx-api-access-token', 'xxxxxxxxxxxx');
       // xhr.setRequestHeader("Content-Type", "text/plain");
       // xhr.onload = function(data) { console.log('uau !!!!!!!!!!!!!!!!!', data.target.response); };
       // xhr.onerror = function() { console.log('---error----');};
